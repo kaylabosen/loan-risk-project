@@ -10,7 +10,12 @@ monthly_payment = (
     / (1 - (1 + monthly_rate) ** (-number_of_payments))
 )
 
+total_paid = monthly_payment * number_of_payments
+total_interest = total_paid - loan_amount
+
 print("Loan Amount: $", loan_amount)
 print("Monthly Payment: $", round(monthly_payment, 2))
+print("Total Interest Paid: $", round(total_interest, 2))
+
 
 
